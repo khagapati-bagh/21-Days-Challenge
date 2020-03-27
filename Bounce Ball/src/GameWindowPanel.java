@@ -14,18 +14,18 @@ public class GameWindowPanel extends JPanel implements KeyListener {
     Animate animate;
     int size = 25;
     GameWindowPanel(){
-        paddle = new Block(175, 480, 150, 25, "brown.png");
+        paddle = new Block(175, 480, 150, 25, "images/brown.png");
         for(int i = 0; i < 8; i++){
-            blocks.add(new Block(i*60+2, 0, 60, 25, "blue.png"));
+            blocks.add(new Block(i*60+2, 0, 60, 25, "images/blue.png"));
         }
         for(int i = 0; i < 8; i++){
-            blocks.add(new Block(i*60+2, 25, 60, 25, "yellow.png"));
+            blocks.add(new Block(i*60+2, 25, 60, 25, "images/yellow.png"));
         }
         for(int i = 0; i < 8; i++){
-            blocks.add(new Block(i*60+2, 50, 60, 25, "red.png"));
+            blocks.add(new Block(i*60+2, 50, 60, 25, "images/red.png"));
         }
         for(int i = 0; i < 8; i++){
-            blocks.add(new Block(i*60+2, 75, 60, 25, "green.png"));
+            blocks.add(new Block(i*60+2, 75, 60, 25, "images/green.png"));
         }
         Random random = new Random();
         blocks.get(random.nextInt(32)).powerup = true;
@@ -34,7 +34,7 @@ public class GameWindowPanel extends JPanel implements KeyListener {
         blocks.get(random.nextInt(32)).powerup = true;
         blocks.get(random.nextInt(32)).powerup = true;
         blocks.get(random.nextInt(32)).powerup = true;
-        ball.add(new Block(237, 437, 25, 25, "ball.png"));
+        ball.add(new Block(237, 437, 25, 25, "images/ball.png"));
         addKeyListener(this);
         setFocusable(true);
     }
